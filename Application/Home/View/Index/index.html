@@ -29,28 +29,35 @@
 
 <body>
 <div class="row header  ">
-  <div class="right pull-right">
-    <ul class="inline pull-right">
+  <!--<div class="right pull-right">
+    <ul class="inline pull-center">
 	  <if condition="$login_user">
 	    <li ><a href="{:U('Home/Item/index')}">{$Think.lang.my_item}</a></li>
 	    <else />
 	    <li ><a href="{:U('Home/User/login')}">{$Think.lang.index_login_or_register}</a></li>
 	  </if>
     </ul>
-    </div>  
+    </div>-->  
   </div>
 
 <div id="dowebok">
     <div class="section">
-        <div class="slide">
+
+ <if condition="$login_user">
+            <li ><a href="{:U('Home/Item/index')}">{$Think.lang.my_item}</a></li>
+            <else />
+            <li ><a href="{:U('Home/User/login')}">{$Think.lang.index_login_or_register}</a></li>
+          </if>
+
+       <!-- <div class="slide">
             <img src="__PUBLIC__/logo/b_64.png" alt="">
             <h1>{$Think.lang.section_title1}</h1>
             <br>
             <p>{$Think.lang.section_description1}</p>
             <br>
             <p>
-                <a class="btn   btn-large " href="{$demo_url}" target="_blank">{$Think.lang.demo}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="btn  btn-large" href="{$help_url}" target="_blank" >{$Think.lang.help}&nbsp;</i></a>
+                <!--<a class="btn   btn-large " href="{$demo_url}" target="_blank">{$Think.lang.demo}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                <!--<a class="btn  btn-large" href="{$help_url}" target="_blank" >{$Think.lang.help}&nbsp;</i></a>-->
             </p>
         </div>
         <div class="slide">
@@ -100,7 +107,7 @@
             <p>
                 <a class="btn   btn-large " href="{:U('Home/User/register')}">{$Think.lang.section_title8}</a>
             </p>
-        </div>
+        </div>-->
     </div>
 </div>
  <include file="Common/footer" />
