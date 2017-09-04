@@ -46,7 +46,9 @@
  <if condition="$login_user">
             <li ><a href="{:U('Home/Item/index')}">{$Think.lang.my_item}</a></li>
             <else />
+            <if condition="$internal">
             <li ><a href="{:U('Home/User/login')}">{$Think.lang.index_login_or_register}</a></li>
+            </if>
           </if>
 
        <!-- <div class="slide">
@@ -57,7 +59,7 @@
             <br>
             <p>
                 <!--<a class="btn   btn-large " href="{$demo_url}" target="_blank">{$Think.lang.demo}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                <!--<a class="btn  btn-large" href="{$help_url}" target="_blank" >{$Think.lang.help}&nbsp;</i></a>-->
+                <!--<a class="btn  btn-large" href="{$help_url}" target="_blank" >{$Think.lang.help}&nbsp;</i></a>
             </p>
         </div>
         <div class="slide">

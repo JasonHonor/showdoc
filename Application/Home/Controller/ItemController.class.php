@@ -226,10 +226,10 @@ class ItemController extends BaseController {
         $ItemCreator = $this->checkItemCreator($uid , $item_id);
 
         if (LANG_SET == 'en-us') {
-            $help_url = "https://www.showdoc.cc/help-en";
+            $help_url = "";
         }
         else{
-            $help_url = "https://www.showdoc.cc/help";
+            $help_url = "";
         }
         
         $this->assign("help_url" , $help_url);
