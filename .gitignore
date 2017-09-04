@@ -3,3 +3,4 @@ server/Application/Runtime/
 Sqlite/
 Application/Common/Conf/config.php
 Application/Home/Config/config.php
+Public/
