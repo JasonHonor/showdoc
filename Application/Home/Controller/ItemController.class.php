@@ -356,12 +356,17 @@ class ItemController extends BaseController {
 
     //导出word
     public function export(){
+
+	\Think\Log::write("Call Export.");
+
         $login_user = $this->checkLogin();
         $item_id = I("item_id/d");  
         $uid = $login_user['uid'] ;
         $this->checkItemPermn($uid , $item_id) ; 
 
         $item = D("Item")->where("item_id = '$item_id' ")->find();
+
+ 	\Think\Log::write("Export Item type=".$item['item_type']);
 
         //对于单页项目，直接导出。对于普通项目，则让其选择目录
         if ($item['item_type'] == 2 ) {

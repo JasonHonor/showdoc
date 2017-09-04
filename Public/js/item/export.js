@@ -67,6 +67,7 @@ function getChildCatList() {
 
 //提交
 $(".export-submit").click(function(){
+	alert('export...');
     var item_id = $("#item_id").val();
     var val=$('input:radio[name="item_type"]:checked').val();
     if (val == 1 ) {

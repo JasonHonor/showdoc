@@ -1,6 +1,8 @@
 <?php
 return array(
     //'配置项'=>'配置值'
+    'LOG_TYPE'=>'File',
+
     //使用sqlite数据库
     'DB_TYPE'   => 'Sqlite', 
     'DB_NAME'   => 'Sqlite/showdoc.db.php', 
